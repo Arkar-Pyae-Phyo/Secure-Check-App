@@ -1,0 +1,22 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SecureCheckApp.App"
+             RequestedThemeVariant="Light">
+             <!-- "Light" theme forces light mode -->
+
+    <Application.Styles>
+        <FluentTheme />
+
+        <Style Selector="TextBlock">
+            <Setter Property="FontFamily" Value="avares://SecureCheckApp/Assets/fonts#Garet"/>
+        </Style>
+
+        <Style Selector="Button">
+            <Setter Property="FontFamily" Value="avares://SecureCheckApp/Assets/fonts#Garet"/>
+        </Style>
+
+        <Style Selector="Window">
+            <Setter Property="FontFamily" Value="avares://SecureCheckApp/Assets/fonts#Garet"/>
+        </Style>
+    </Application.Styles>
+</Application>

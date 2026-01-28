@@ -1,0 +1,358 @@
+<Window xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:SecureCheckApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="700"
+        x:Class="SecureCheckApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Secure Check App"
+        Icon="/ico/favicon.ico"
+        Width="600" Height="700"
+        CanResize="False"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+            <GradientStop Color="#F8FAFC" Offset="0"/>
+            <GradientStop Color="#E0E7FF" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Window.Styles>
+        <!-- Button Styles with Animations -->
+        <Style Selector="Button.primary">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="35,16"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Transitions">
+                <Transitions>
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.3" Easing="CubicEaseOut"/>
+                    <DoubleTransition Property="Opacity" Duration="0:0:0.2"/>
+                </Transitions>
+            </Setter>
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                    <GradientStop Color="#8B5CF6" Offset="0"/>
+                    <GradientStop Color="#6366F1" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.primary:pointerover">
+            <Setter Property="RenderTransform" Value="scale(1.05)"/>
+        </Style>
+
+        <Style Selector="Button.primary:pointerover TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style Selector="Button.primary TextBlock">
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="Foreground" Duration="0:0:0.3"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.primary:pressed">
+            <Setter Property="RenderTransform" Value="scale(0.98)"/>
+            <Setter Property="Opacity" Value="0.9"/>
+        </Style>
+
+        <Style Selector="Button.primary /template/ ContentPresenter">
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="Background" Duration="0:0:0.3"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.primary:pointerover /template/ ContentPresenter">
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                    <GradientStop Color="#10B981" Offset="0"/>
+                    <GradientStop Color="#059669" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.primary:pressed /template/ ContentPresenter">
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                    <GradientStop Color="#047857" Offset="0"/>
+                    <GradientStop Color="#065F46" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.primary:disabled /template/ ContentPresenter">
+            <Setter Property="Background" Value="#CBD5E1"/>
+            <Setter Property="Foreground" Value="#94A3B8"/>
+        </Style>
+
+        <Style Selector="Button.refresh">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Padding" Value="40,12"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Transitions">
+                <Transitions>
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.3" Easing="CubicEaseOut"/>
+                    <DoubleTransition Property="Opacity" Duration="0:0:0.2"/>
+                </Transitions>
+            </Setter>
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
+                    <GradientStop Color="#06B6D4" Offset="0"/>
+                    <GradientStop Color="#0EA5E9" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.refresh:pointerover">
+            <Setter Property="RenderTransform" Value="scale(1.05)"/>
+        </Style>
+
+        <Style Selector="Button.refresh:pointerover TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style Selector="Button.refresh TextBlock">
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="Foreground" Duration="0:0:0.3"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.refresh:pressed">
+            <Setter Property="RenderTransform" Value="scale(0.98)"/>
+            <Setter Property="Opacity" Value="0.9"/>
+        </Style>
+
+        <Style Selector="Button.refresh /template/ ContentPresenter">
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="Background" Duration="0:0:0.3"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.refresh:pointerover /template/ ContentPresenter">
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
+                    <GradientStop Color="#F97316" Offset="0"/>
+                    <GradientStop Color="#EA580C" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.refresh:pressed /template/ ContentPresenter">
+            <Setter Property="Background">
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
+                    <GradientStop Color="#C2410C" Offset="0"/>
+                    <GradientStop Color="#9A3412" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.refresh:disabled /template/ ContentPresenter">
+            <Setter Property="Background" Value="#CBD5E1"/>
+            <Setter Property="Foreground" Value="#94A3B8"/>
+        </Style>
+
+    </Window.Styles>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" 
+                  VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header Section -->
+            <Border Grid.Row="0" 
+                    Padding="50,40,50,30">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Logo -->
+                    <Image Grid.Column="0"
+                           Source="avares://SecureCheckApp/img/dce.png"
+                           Width="100"
+                           Height="100"
+                           Margin="0,0,30,0"
+                           VerticalAlignment="Center"
+                           Stretch="Uniform">
+                        <Image.Transitions>
+                            <Transitions>
+                                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.4" Easing="CubicEaseOut"/>
+                            </Transitions>
+                        </Image.Transitions>
+                    </Image>
+
+                    <!-- Title Section -->
+                    <StackPanel Grid.Column="1" 
+                                VerticalAlignment="Center"
+                                Spacing="8">
+                        <TextBlock Text="SECURE CHECK APP"
+                                   FontSize="44"
+                                   FontWeight="Bold"
+                                   LetterSpacing="-0.5">
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
+                                    <GradientStop Color="#8B5CF6" Offset="0"/>
+                                    <GradientStop Color="#6366F1" Offset="0.5"/>
+                                    <GradientStop Color="#06B6D4" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock Text="Real-time security monitoring and detection"
+                                   FontSize="16"
+                                   Foreground="#64748B"
+                                   FontWeight="Medium"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Main Content Section -->
+            <StackPanel Grid.Row="1"
+                        MaxWidth="1200"
+                        Margin="50,0,50,50"
+                        Spacing="30">
+
+                <!-- Action Card -->
+                <Border CornerRadius="20"
+                        Padding="35"
+                        BoxShadow="0 8 32 0 #18000000">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+                            <GradientStop Color="#FFFFFF" Offset="0"/>
+                            <GradientStop Color="#F8FAFC" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Transitions>
+                        <Transitions>
+                            <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.3"/>
+                            <BoxShadowsTransition Property="BoxShadow" Duration="0:0:0.3"/>
+                        </Transitions>
+                    </Border.Transitions>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Action Buttons Row -->
+                        <StackPanel Grid.Row="0" 
+                                    Orientation="Horizontal" 
+                                    Spacing="20">
+                            <Button Classes="primary"
+                                    Command="{Binding RunSecurityCheckCommand}">
+                                <StackPanel Orientation="Horizontal" Spacing="12">
+                                    <TextBlock Text="🔒" FontSize="22" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Run Security Check" 
+                                               FontSize="16"
+                                               VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Classes="refresh"
+                                    Command="{Binding RefreshCommand}">
+                                <TextBlock Text="Refresh" 
+                                           FontSize="15"
+                                           VerticalAlignment="Center"/>
+                            </Button>
+
+                            <!-- Continue to Exam Button (only visible when clean) -->
+                            <Button Classes="primary"
+                                    Command="{Binding ContinueToExamCommand}"
+                                    IsVisible="{Binding ShowContinueButton}">
+                                <StackPanel Orientation="Horizontal" Spacing="12">
+                                    <TextBlock Text="✅" FontSize="22" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Continue to Exam" 
+                                               FontSize="16"
+                                               VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <!-- Status Information -->
+                        <StackPanel Grid.Row="1" 
+                                    Margin="0,25,0,0"
+                                    Spacing="12">
+                            <TextBlock Text="{Binding StatusText}"
+                                       FontSize="18"
+                                       FontWeight="SemiBold"
+                                       Foreground="#7C3AED">
+                                <TextBlock.Transitions>
+                                    <Transitions>
+                                        <BrushTransition Property="Foreground" Duration="0:0:0.3"/>
+                                    </Transitions>
+                                </TextBlock.Transitions>
+                            </TextBlock>
+
+                            <TextBlock Text="{Binding IPv4Address}"
+                                       FontSize="16"
+                                       FontWeight="Medium"
+                                       Foreground="#0891B2">
+                                <TextBlock.Transitions>
+                                    <Transitions>
+                                        <BrushTransition Property="Foreground" Duration="0:0:0.3"/>
+                                    </Transitions>
+                                </TextBlock.Transitions>
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Results Card -->
+                <Border Background="{Binding ResultPanelBackground}"
+                        BorderBrush="{Binding ResultPanelBorderBrush}"
+                        BorderThickness="2"
+                        CornerRadius="20"
+                        Padding="35"
+                        MinHeight="350"
+                        BoxShadow="0 8 32 0 #18000000">
+                    <Border.Transitions>
+                        <Transitions>
+                            <BrushTransition Property="Background" Duration="0:0:0.4"/>
+                            <BrushTransition Property="BorderBrush" Duration="0:0:0.4"/>
+                        </Transitions>
+                    </Border.Transitions>
+                    <ScrollViewer MaxHeight="500"
+                                  VerticalScrollBarVisibility="Auto">
+                        <TextBlock Text="{Binding DetectionResults}"
+                                   FontFamily="avares://SecureCheckApp/Assets/fonts#Garet"
+                                   FontSize="14"
+                                   Foreground="#3B82F6"
+                                   TextWrapping="Wrap"
+                                   LineHeight="26">
+                            <TextBlock.Transitions>
+                                <Transitions>
+                                    <DoubleTransition Property="Opacity" Duration="0:0:0.3"/>
+                                </Transitions>
+                            </TextBlock.Transitions>
+                        </TextBlock>
+                    </ScrollViewer>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

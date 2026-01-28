@@ -1,0 +1,63 @@
+END-USER LICENSE AGREEMENT (EULA)
+=====================================
+
+Secure Check App - Software License Agreement
+
+Copyright © 2026. All rights reserved.
+
+DEVELOPERS:
+- Swan Htet
+- Arkar Pyae Phyo
+- Aung Myint Myat
+
+GRANT OF LICENSE:
+This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and the developers of Secure Check App. By installing, copying, or otherwise using this software, you agree to be bound by the terms of this EULA.
+
+1. LICENSE GRANT
+The developers grant you a non-exclusive, non-transferable license to use the Secure Check App software ("Software") in accordance with the terms of this agreement.
+
+2. PERMITTED USE
+You may:
+- Install and use the Software on compatible devices
+- Use the Software for security checking and exam access purposes
+- Make backup copies for archival purposes
+
+3. RESTRICTIONS
+You may NOT:
+- Modify, reverse engineer, decompile, or disassemble the Software
+- Remove or alter any copyright notices or proprietary legends
+- Distribute, rent, lease, or sublicense the Software
+- Use the Software for any illegal or unauthorized purpose
+- Attempt to bypass or circumvent security features
+
+4. INTELLECTUAL PROPERTY
+All title, ownership rights, and intellectual property rights in and to the Software remain with the developers. The Software is protected by copyright laws and international treaty provisions.
+
+5. DATA COLLECTION
+The Software collects system information including:
+- IPv4 address
+- Installed software detection
+- System security status
+This data is used solely for security verification and exam access purposes.
+
+6. WARRANTY DISCLAIMER
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+7. LIMITATION OF LIABILITY
+IN NO EVENT SHALL THE DEVELOPERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+8. TERMINATION
+This license is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any term of this EULA.
+
+9. GOVERNING LAW
+This EULA shall be governed by and construed in accordance with the laws of the jurisdiction in which the software is used.
+
+10. ENTIRE AGREEMENT
+This EULA constitutes the entire agreement between you and the developers regarding the Software and supersedes all prior agreements and understandings.
+
+ACCEPTANCE:
+By installing or using the Secure Check App, you acknowledge that you have read this agreement, understand it, and agree to be bound by its terms and conditions.
+
+For questions or support, please contact the development team.
+
+Version 1.0 - January 2026

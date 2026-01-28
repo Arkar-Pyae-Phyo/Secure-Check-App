@@ -1,0 +1,2 @@
+D:\Projects\Security Check App\SecureCheckApp\bin\Release\net8.0\win-x64\publish\SecureCheckApp.pdb
+D:\Projects\Security Check App\SecureCheckApp\bin\Release\net8.0\win-x64\publish\SecureCheckApp.exe
