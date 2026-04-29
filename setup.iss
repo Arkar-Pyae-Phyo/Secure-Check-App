@@ -8,7 +8,7 @@
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
-AppId={{8A5D4E3F-2B1C-4A9E-8F7D-6C3E5A2B1D4F}
+AppId={8A5D4E3F-2B1C-4A9E-8F7D-6C3E5A2B1D4F}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
