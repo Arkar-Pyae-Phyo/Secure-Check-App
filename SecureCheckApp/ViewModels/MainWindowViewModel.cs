@@ -13,11 +13,12 @@ public class MainWindowViewModel : ViewModelBase
 {
     private string _statusText = "⏳ Status: Waiting";
     private string _ipv4Address = "IPv4: -";
-    private string _detectionResults = "Click 'Run Security Check' to begin...";
+    private string _detectionResults = "⚠️ SECURITY CHECK PENDING.\n\nPlease click 'Run Security Check' to verify your system security before proceeding.";
+    private string _detectionResultsForeground = "#DC2626";
     private bool _hasWarnings;
     private bool _isChecking;
-    private string _resultPanelBackground = "#F0F9FF";
-    private string _resultPanelBorderBrush = "#06B6D4";
+    private string _resultPanelBackground = "#F9FAFB";
+    private string _resultPanelBorderBrush = "#D1D5DB";
     private string _generatedCode = "";
     private bool _showContinueButton = false;
     private readonly ApiService _apiService;
@@ -47,6 +48,12 @@ public class MainWindowViewModel : ViewModelBase
     {
         get => _detectionResults;
         set => SetProperty(ref _detectionResults, value);
+    }
+
+    public string DetectionResultsForeground
+    {
+        get => _detectionResultsForeground;
+        set => SetProperty(ref _detectionResultsForeground, value);
     }
 
     public string ResultPanelBackground
@@ -80,8 +87,8 @@ public class MainWindowViewModel : ViewModelBase
         {
             if (SetProperty(ref _hasWarnings, value))
             {
-                ResultPanelBackground = value ? "#FEF3C7" : "#F0F9FF";
-                ResultPanelBorderBrush = value ? "#F59E0B" : "#06B6D4";
+                ResultPanelBackground = value ? "#FEF2F2" : "#F9FAFB";
+                ResultPanelBorderBrush = value ? "#F87171" : "#D1D5DB";
             }
         }
     }
@@ -162,6 +169,7 @@ public class MainWindowViewModel : ViewModelBase
         IsChecking = true;
         StatusText = "⏳ Status: Checking...";
         DetectionResults = "Running security check, please wait...";
+        DetectionResultsForeground = "#334155";
         HasWarnings = false;
 
         try
@@ -185,6 +193,7 @@ public class MainWindowViewModel : ViewModelBase
             if (detectionResult.HasWarnings)
             {
                 HasWarnings = true;
+                DetectionResultsForeground = "#DC2626";
                 ShowContinueButton = false;
                 StatusText = "⚠️ Status: Warning - Remote tools detected!";
                 resultsBuilder.AppendLine($"⚠️ DETECTED REMOTE TOOLS ({detectionResult.DetectedTools.Count}):");
@@ -204,6 +213,7 @@ public class MainWindowViewModel : ViewModelBase
             else
             {
                 HasWarnings = false;
+                DetectionResultsForeground = "#15803D";
                 ShowContinueButton = true;
                 StatusText = "✅ Status: Completed - No threats detected";
                 resultsBuilder.AppendLine("✅ NO REMOTE TOOLS DETECTED");
@@ -222,6 +232,7 @@ public class MainWindowViewModel : ViewModelBase
         {
             StatusText = "❌ Status: Error";
             DetectionResults = $"Error during check:\n{ex.Message}";
+            DetectionResultsForeground = "#DC2626";
             HasWarnings = true;
             ShowContinueButton = false;
         }
@@ -309,7 +320,14 @@ public class MainWindowViewModel : ViewModelBase
         if (IsChecking)
             return;
 
-        StatusText = "🔄 Status: Refreshing...";
-        await RunSecurityCheckAsync();
+        StatusText = "⏳ Status: Waiting";
+        IPv4Address = "IPv4: -";
+        DetectionResults = "⚠️ SECURITY CHECK PENDING.\n\nPlease click 'Run Security Check' to verify your system security before proceeding.";
+        DetectionResultsForeground = "#DC2626";
+        HasWarnings = false;
+        ShowContinueButton = false;
+        GeneratedCode = "";
+
+        await Task.CompletedTask;
     }
 }

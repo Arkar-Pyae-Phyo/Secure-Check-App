@@ -19,12 +19,12 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SecureCheckApp
-build_property.ProjectDir = D:\Projects\Security Check App\SecureCheckApp\
+build_property.ProjectDir = d:\Projects\Security Check App - Copy\SecureCheckApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/Projects/Security Check App/SecureCheckApp/App.axaml]
+[d:/Projects/Security Check App - Copy/SecureCheckApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Projects/Security Check App/SecureCheckApp/Views/MainWindow.axaml]
+[d:/Projects/Security Check App - Copy/SecureCheckApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

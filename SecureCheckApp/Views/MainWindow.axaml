@@ -14,10 +14,7 @@
         WindowStartupLocation="CenterScreen">
 
     <Window.Background>
-        <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
-            <GradientStop Color="#F8FAFC" Offset="0"/>
-            <GradientStop Color="#E0E7FF" Offset="1"/>
-        </LinearGradientBrush>
+        <SolidColorBrush Color="#F4F5F7"/>
     </Window.Background>
 
     <Design.DataContext>
@@ -41,8 +38,8 @@
             </Setter>
             <Setter Property="Background">
                 <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
-                    <GradientStop Color="#8B5CF6" Offset="0"/>
-                    <GradientStop Color="#6366F1" Offset="1"/>
+                    <GradientStop Color="#991B1B" Offset="0"/>
+                    <GradientStop Color="#7F1D1D" Offset="1"/>
                 </LinearGradientBrush>
             </Setter>
         </Style>
@@ -79,8 +76,8 @@
         <Style Selector="Button.primary:pointerover /template/ ContentPresenter">
             <Setter Property="Background">
                 <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
-                    <GradientStop Color="#10B981" Offset="0"/>
-                    <GradientStop Color="#059669" Offset="1"/>
+                    <GradientStop Color="#B91C1C" Offset="0"/>
+                    <GradientStop Color="#991B1B" Offset="1"/>
                 </LinearGradientBrush>
             </Setter>
         </Style>
@@ -88,8 +85,8 @@
         <Style Selector="Button.primary:pressed /template/ ContentPresenter">
             <Setter Property="Background">
                 <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
-                    <GradientStop Color="#047857" Offset="0"/>
-                    <GradientStop Color="#065F46" Offset="1"/>
+                    <GradientStop Color="#7F1D1D" Offset="0"/>
+                    <GradientStop Color="#450A0A" Offset="1"/>
                 </LinearGradientBrush>
             </Setter>
         </Style>
@@ -114,8 +111,8 @@
             </Setter>
             <Setter Property="Background">
                 <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
-                    <GradientStop Color="#06B6D4" Offset="0"/>
-                    <GradientStop Color="#0EA5E9" Offset="1"/>
+                    <GradientStop Color="#475569" Offset="0"/>
+                    <GradientStop Color="#334155" Offset="1"/>
                 </LinearGradientBrush>
             </Setter>
         </Style>
@@ -152,8 +149,8 @@
         <Style Selector="Button.refresh:pointerover /template/ ContentPresenter">
             <Setter Property="Background">
                 <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
-                    <GradientStop Color="#F97316" Offset="0"/>
-                    <GradientStop Color="#EA580C" Offset="1"/>
+                    <GradientStop Color="#64748B" Offset="0"/>
+                    <GradientStop Color="#475569" Offset="1"/>
                 </LinearGradientBrush>
             </Setter>
         </Style>
@@ -161,8 +158,8 @@
         <Style Selector="Button.refresh:pressed /template/ ContentPresenter">
             <Setter Property="Background">
                 <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
-                    <GradientStop Color="#C2410C" Offset="0"/>
-                    <GradientStop Color="#9A3412" Offset="1"/>
+                    <GradientStop Color="#334155" Offset="0"/>
+                    <GradientStop Color="#1E293B" Offset="1"/>
                 </LinearGradientBrush>
             </Setter>
         </Style>
@@ -174,31 +171,22 @@
 
     </Window.Styles>
 
-    <ScrollViewer HorizontalScrollBarVisibility="Disabled" 
-                  VerticalScrollBarVisibility="Auto">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <!-- Header Section -->
-            <Border Grid.Row="0" 
-                    Padding="50,40,50,30">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <!-- Logo -->
-                    <Image Grid.Column="0"
-                           Source="avares://SecureCheckApp/img/dce.png"
-                           Width="100"
-                           Height="100"
-                           Margin="0,0,30,0"
-                           VerticalAlignment="Center"
-                           Stretch="Uniform">
+        <!-- Header Section -->
+        <Border Grid.Row="0" 
+                Padding="30,20,30,10">
+            <StackPanel HorizontalAlignment="Center" Spacing="10">
+                <!-- Logo -->
+                <Image Source="avares://SecureCheckApp/img/dce.png"
+                       Width="180"
+                       Height="180"
+                       HorizontalAlignment="Center"
+                       Stretch="Uniform">
                         <Image.Transitions>
                             <Transitions>
                                 <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.4" Easing="CubicEaseOut"/>
@@ -207,38 +195,40 @@
                     </Image>
 
                     <!-- Title Section -->
-                    <StackPanel Grid.Column="1" 
-                                VerticalAlignment="Center"
+                    <StackPanel HorizontalAlignment="Center"
                                 Spacing="8">
-                        <TextBlock Text="SECURE CHECK APP"
-                                   FontSize="44"
+                        <TextBlock Text="Secured Assessment System"
+                                   FontSize="38"
+                                   HorizontalAlignment="Center"
                                    FontWeight="Bold"
                                    LetterSpacing="-0.5">
                             <TextBlock.Foreground>
-                                <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,0%">
-                                    <GradientStop Color="#8B5CF6" Offset="0"/>
-                                    <GradientStop Color="#6366F1" Offset="0.5"/>
-                                    <GradientStop Color="#06B6D4" Offset="1"/>
-                                </LinearGradientBrush>
+                                <SolidColorBrush Color="#8C1D1D"/>
                             </TextBlock.Foreground>
                         </TextBlock>
-                        <TextBlock Text="Real-time security monitoring and detection"
+                        <TextBlock Text="Online Proctored Assessment Security Module"
                                    FontSize="16"
-                                   Foreground="#64748B"
+                                   HorizontalAlignment="Center"
+                                   Foreground="#6B7280"
                                    FontWeight="Medium"/>
                     </StackPanel>
-                </Grid>
+                </StackPanel>
             </Border>
 
             <!-- Main Content Section -->
-            <StackPanel Grid.Row="1"
-                        MaxWidth="1200"
-                        Margin="50,0,50,50"
-                        Spacing="30">
+            <Grid Grid.Row="1"
+                  MaxWidth="1200"
+                  Margin="30,0,30,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
                 <!-- Action Card -->
-                <Border CornerRadius="20"
-                        Padding="35"
+                <Border Grid.Row="0"
+                        CornerRadius="20"
+                        Padding="25"
+                        Margin="0,0,0,20"
                         BoxShadow="0 8 32 0 #18000000">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
@@ -262,6 +252,7 @@
                         <!-- Action Buttons Row -->
                         <StackPanel Grid.Row="0" 
                                     Orientation="Horizontal" 
+                                    HorizontalAlignment="Center"
                                     Spacing="20">
                             <Button Classes="primary"
                                     Command="{Binding RunSecurityCheckCommand}">
@@ -296,11 +287,13 @@
                         <!-- Status Information -->
                         <StackPanel Grid.Row="1" 
                                     Margin="0,25,0,0"
+                                    HorizontalAlignment="Center"
                                     Spacing="12">
                             <TextBlock Text="{Binding StatusText}"
                                        FontSize="18"
+                                       HorizontalAlignment="Center"
                                        FontWeight="SemiBold"
-                                       Foreground="#7C3AED">
+                                       Foreground="#374151">
                                 <TextBlock.Transitions>
                                     <Transitions>
                                         <BrushTransition Property="Foreground" Duration="0:0:0.3"/>
@@ -310,8 +303,9 @@
 
                             <TextBlock Text="{Binding IPv4Address}"
                                        FontSize="16"
+                                       HorizontalAlignment="Center"
                                        FontWeight="Medium"
-                                       Foreground="#0891B2">
+                                       Foreground="#6B7280">
                                 <TextBlock.Transitions>
                                     <Transitions>
                                         <BrushTransition Property="Foreground" Duration="0:0:0.3"/>
@@ -323,12 +317,13 @@
                 </Border>
 
                 <!-- Results Card -->
-                <Border Background="{Binding ResultPanelBackground}"
+                <Border Grid.Row="1"
+                        Background="{Binding ResultPanelBackground}"
                         BorderBrush="{Binding ResultPanelBorderBrush}"
                         BorderThickness="2"
                         CornerRadius="20"
-                        Padding="35"
-                        MinHeight="350"
+                        Padding="25"
+                        MinHeight="150"
                         BoxShadow="0 8 32 0 #18000000">
                     <Border.Transitions>
                         <Transitions>
@@ -336,12 +331,12 @@
                             <BrushTransition Property="BorderBrush" Duration="0:0:0.4"/>
                         </Transitions>
                     </Border.Transitions>
-                    <ScrollViewer MaxHeight="500"
-                                  VerticalScrollBarVisibility="Auto">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <TextBlock Text="{Binding DetectionResults}"
                                    FontFamily="avares://SecureCheckApp/Assets/fonts#Garet"
                                    FontSize="14"
-                                   Foreground="#3B82F6"
+                                   Foreground="{Binding DetectionResultsForeground}"
+                                   FontWeight="SemiBold"
                                    TextWrapping="Wrap"
                                    LineHeight="26">
                             <TextBlock.Transitions>
@@ -352,7 +347,6 @@
                         </TextBlock>
                     </ScrollViewer>
                 </Border>
-            </StackPanel>
+            </Grid>
         </Grid>
-    </ScrollViewer>
 </Window>

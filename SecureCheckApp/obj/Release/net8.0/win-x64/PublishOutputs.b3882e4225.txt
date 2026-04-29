@@ -1,0 +1,5 @@
+d:\Projects\Security Check App - Copy\Output\SecureCheckApp.pdb
+d:\Projects\Security Check App - Copy\Output\av_libglesv2.dll
+d:\Projects\Security Check App - Copy\Output\libHarfBuzzSharp.dll
+d:\Projects\Security Check App - Copy\Output\libSkiaSharp.dll
+d:\Projects\Security Check App - Copy\Output\SecureCheckApp.exe

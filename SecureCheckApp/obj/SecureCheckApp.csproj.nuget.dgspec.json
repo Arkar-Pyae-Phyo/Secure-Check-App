@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Security Check App\\SecureCheckApp\\SecureCheckApp.csproj": {}
+    "d:\\Projects\\Security Check App - Copy\\SecureCheckApp\\SecureCheckApp.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Security Check App\\SecureCheckApp\\SecureCheckApp.csproj": {
+    "d:\\Projects\\Security Check App - Copy\\SecureCheckApp\\SecureCheckApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Security Check App\\SecureCheckApp\\SecureCheckApp.csproj",
+        "projectUniqueName": "d:\\Projects\\Security Check App - Copy\\SecureCheckApp\\SecureCheckApp.csproj",
         "projectName": "SecureCheckApp",
-        "projectPath": "D:\\Projects\\Security Check App\\SecureCheckApp\\SecureCheckApp.csproj",
+        "projectPath": "d:\\Projects\\Security Check App - Copy\\SecureCheckApp\\SecureCheckApp.csproj",
         "packagesPath": "C:\\Users\\akppa\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Security Check App\\SecureCheckApp\\obj\\",
+        "outputPath": "d:\\Projects\\Security Check App - Copy\\SecureCheckApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\akppa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -51,13 +51,15 @@
               "target": "Package",
               "version": "[11.1.0, )"
             },
-            "Avalonia.Diagnostics": {
-              "target": "Package",
-              "version": "[11.1.0, )"
-            },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.1.0, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.26, )",
+              "autoReferenced": true
             }
           },
           "imports": [
@@ -71,12 +73,31 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.26, 8.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.26, 8.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.26, 8.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.420/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
         }
       }
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecureCheckApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f925d4ae67f81cfbe9744c155f2a1121e80ff9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecureCheckApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecureCheckApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
